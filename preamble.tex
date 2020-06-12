@@ -1,0 +1,50 @@
+% section title macros (can be changed)
+\newcommand{\insertProjectFundingSchemeTitle}{Project Funding Scheme:}
+\newcommand{\insertProjectShortSummaryTitle}{Short Summary:}
+
+% other macros (do not change)
+\makeatletter
+
+\newcommand\projectCode[1]{\renewcommand{\insertProjectCode}{#1}}
+\newcommand\insertProjectCode{\@latex@error{No \noexpand\projectCode given}\@ehc}
+
+\newcommand\projectTitle[1]{\renewcommand{\insertProjectTitle}{#1}}
+\newcommand\insertProjectTitle{\@latex@error{No \noexpand\projectTitle given}\@ehc}
+
+\newcommand\projectPIs[1]{\renewcommand{\insertProjectPIs}{#1}}
+\newcommand\insertProjectPIs{\@latex@error{No \noexpand\projectPIs given}\@ehc}
+
+\newcommand\projectFundingScheme[1]{\renewcommand{\insertProjectFundingScheme}{#1}}
+\newcommand\insertProjectFundingScheme{\@latex@error{No \noexpand\projectFundingScheme given}\@ehc}
+
+\newcommand\projectShortSummary[1]{\renewcommand{\insertProjectShortSummary}{#1}}
+\newcommand\insertProjectShortSummary{\@latex@error{No \noexpand\projectShortSummary given}\@ehc}
+
+%\newcommand\insertProjectHeader{
+%  \noindent\hrulefill\\[.5em]
+%  \noindent\llap{\fbox{\bfseries\insertProjectCode}\hspace{1em}}{\Large\bfseries\insertProjectTitle} \\[.5em]
+%  PIs: \insertProjectPIs\\
+%  \null\hrulefill \\[.5em]
+%  \begin{tabular}{@{}ll}
+%    {\bfseries\insertProjectFundingSchemeTitle} & \insertProjectFundingScheme \\[.5em]
+%    {\bfseries\insertProjectShortSummaryTitle} & \insertProjectShortSummary
+%  \end{tabular}\\[.5em]
+%  \null\hrulefill
+%}
+
+\usepackage{tabularx}
+
+\newcommand\insertProjectHeader{
+  \noindent\hrulefill\\[.5em]
+  \noindent\llap{\fbox{\bfseries\insertProjectCode}\hspace{1em}}{\Large\bfseries\insertProjectTitle} \\[.5em]
+  PIs: \insertProjectPIs\\
+  \null\hrulefill \\[.5em]
+  \begin{tabularx}{\textwidth}{@{} l X @{}}
+    {\bfseries\insertProjectFundingSchemeTitle} & \insertProjectFundingScheme \\[.5em]
+    {\bfseries\insertProjectShortSummaryTitle} & \insertProjectShortSummary
+  \end{tabularx}\\[.5em]
+  \null\hrulefill
+}
+
+\makeatother
+
