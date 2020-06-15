@@ -84,26 +84,29 @@
 
 % - Account of the problem
 % - Motivation
-In  the  recently  approved  National Hydrogen  Strategy,  the  German
-Federal  Government   grants  hydrogen,  and  in   particular  ``green
+Better theoretical understanding of complex electrocatalytic reactions is
+crucial in order to increase the efficiency  and scalability  of electrocatalytic processes
+and is therefore a highly relevant topic of research.
+The pivotal strategic importance of  technologies based on electrocatalytic reactions
+is underlined in  the  recently  approved  National Hydrogen  Strategy of  the  German
+Federal  Government. This initiative  grants  hydrogen,  and  in   particular  ``green
 hydrogen''  created with  renewable  energy a  strategic  role in  the
 decarbonization of the economy as an energy carrier, an energy storage
 option, a  sector coupling  technology, a  precursor for  the chemical
-industry  and  and a  means  for  CO2  emission reduction  in  various
-industrial  processes. As  a part  of this  strategy, the  creation of
+industry  and a  means  for  CO2  emission reduction  in  various
+industrial  processes. 
+As  a part  of this  strategy, the  creation of
 hydrogen  from  electrical energy  in  electrolyzers  and the  reverse
 process --  the recovery  of electrical energy  from hydrogen  in fuel
-cells -- are are seen  as indispensable technologies whose development
+cells -- are seen  as indispensable technologies whose development
 shall be  supported by  R\&D investments  and market  incentives.
 \todo{JF: Die Wasserstoffstrategie ist stark markt- und Technologieorientiert,
   und gibt nicht mehr konkretes zu F\&E her...}
-
+%
 Both technologies are based  on electrocatalytic reactions. Production
 and utilization  of hydrogen are just  two examples for this  class of
 reactions, other  electrocatalytic reactions  are fundamental  in post
-lithium  batteries,  material  synthesis  and  other  fields.  Further
-development   in   understanding,   efficiency  and   scalability   of
-electrocatalytic reactions is thervore a highly relevant topic of research.
+lithium  batteries,  material  synthesis  and  other  fields. 
 
 
 
@@ -111,12 +114,15 @@ electrocatalytic reactions is thervore a highly relevant topic of research.
 Investigation of electrocatalytic  reactions is one of  the main areas
 of research  in electrochemistry.  These  reactions take place  at the
 interface between  (mostly metallic)  catalysts and  electrolytes.
-They  are investigate  by a  number of  experimental techniques,  e.g.
-RRDE    (Rotating   Ring    Disc   Electrode),    DEMS   (Differential
-Electrochemical  Mass  Spectroscopy),  CV  (Cyclic  Voltammetry),  STM
-(Scanning Tunneling Microscopy),  EQCM (Electrochemical Quartz Crystal
-Microbalance), SEM (Scanning  Electrochemical Microscopy), AFM (Atomic
-Force Microscopy), EIS (Electrochemical Impedance Spectroscopy).
+They  are investigated  by a  number of  experimental techniques,  e.g.
+RRDE    (Rotating   Ring    Disc   Electrode),   
+% DEMS   (Differential Electrochemical  Mass  Spectroscopy), 
+CV  (Cyclic  Voltammetry),  
+STM (Scanning Tunneling Microscopy), 
+% EQCM (Electrochemical Quartz Crystal Microbalance), 
+SEM (Scanning  Electrochemical Microscopy),
+AFM (Atomic Force Microscopy), 
+EIS (Electrochemical Impedance Spectroscopy).
 \todo{Diesen Abschnitt ggf.umformulieren (kopiert aus altem Antrag)}
 
 In order  to interpret  the experimental  results, and  to understand,
@@ -126,30 +132,30 @@ modeling  results  can  be  expressed using  analytic  expressions  or
 need to be obtained via numerical simulation.
 
 
-Showing the  relevance of mathematical and  numerical modeling, recent
-research on  these topics by  internationally leading groups  more and
+% Showing the  relevance of mathematical and  numerical modeling, 
+Recent research by  internationally leading groups  more and
 more focuses  on the  interplay between  mass transport,  reaction and
-electric    field    at    the     nanoscale, resolving double layer effects.     The    authors    of
+electric    field    at    the     nanoscale, resolving double layer effects.
+The    authors    of
 \cite{lin2019understanding}          and         \cite{tan2018double},
-\cite{eden2019modeling} focus on models  simulation of these processes
+\cite{eden2019modeling} focus on models and simulation of these processes
 at nanoparticles or homogeneous  (single crystalline) electrodes based
 on     classical    Nernst-Planck     models.    The     authors    of
 \cite{bohra2019modeling} work in the  same direction using generalized
 Nernst-Planck models similar to those derived at WIAS.
-
-These are focused on homogeneous interfaces with no variation in their
-spatial  structure. However,  they  do   not  take  into  accunt  to
+All these approaches are based on homogeneous interfaces with no variation in their
+spatial  structure. They  do   not  take  into  account  the
 heterogeneity   of   the   electrochemical  interfaces   due   to   the
 polycrystalline structure  of the  catalyst, the restructuring  of the
 catalyst surfaces depending  on various stages of the  reaction or due
-to defects like steps creating spots of increased activity.
+to defects like steps that create spots of increased activity.
 Moreover, these activities are lacking a strategy to upscale the nanoscale
 results to the macrocscale of real experimental or practical devices.
 
 
 
 % - Preliminary work by the PIs
-Wias research group  RG7 represented by PI M. Landstorfer is active
+WIAS research group  RG7 represented by PI M. Landstorfer is active
 in the development of thermodynamically correct models of electrochemical systems.
 A seminal result is in the derivation of a comprehensive electrolyte model which takes into account finite
 ion sizes, solvation and the influence of the pressure.
@@ -175,7 +181,7 @@ respect to the application of the improved electrochemical double layer
 theory to the case of polycrystalline  electrodes. Based on the assumption of large
 grain sizes compared to the Debye length, characteristic data of the electorchemical double layer,
 like charge, capacitance and potential of zero charge of a polycrystalline electrode can be derived from  the corresponding data
-for the different kinds of grains weighted with their respecive surface fraction,
+for the different kinds of grains weighted with their respective surface fraction,
 see Fig. \ref{fig:JES}. This approach opens the way to
 a stochastic description of complex real polycrystalline surfaces.
 
@@ -188,7 +194,7 @@ a stochastic description of complex real polycrystalline surfaces.
     Right: double layer capacity curves for different electrolyte concentrations.
     Solid lines (—) refer to the weighted sum of the grain contributions.,
     (+) and dashed (- -) lines mark data obtained from numerical simulations for
-    small and large grain sizes compared to the Debye length, respectively.
+    small and large grain sizes, respectively.
  \label{fig:JES}}
 \end{figure}
 
@@ -203,7 +209,24 @@ The results for polycrystalline electrodes  so far are confined to the
 case of  thermodynamic equilibrium  and ideally  polarizing electrodes
 (without  reactions). They  are an  excellent starting  point for  the
 developmennt of  a more general theory  which includes electrochemical
-reactions at polycrystalline surfaces.  Accompanied by the development
+reactions at polycrystalline surfaces. 
+In particular, the achieved results provide valuable hints about the most relevant extensions of the modeling framework in order to describe electrocatalytic reactions.
+For example the dielectric susceptibility should depend on the local electrolytic concentration
+and the temperature. 
+Oxide formation on inhomogeneous electrode surfaces can be modeled
+by non-monotonous potentials.
+The investigation of the dynamics of spatially inhomogeneous reacting surfaces
+should lead to effective description of the reactions on a more macroscoptic scale
+and extend the stochastic characterization of the polycrystalline electrodes in equilibrium
+to the non-equilibrium case.
+%
+Spatial resolved simulation of the model provides potential surfaces at
+some given distance from the electrode surface, essentially corresponding to experimental STM measurements. 
+The numerical solution of the transient system allows to simulate CV and to compute the corresponding current--voltage curve. 
+This modeling approach is not restricted to CV and STM, but rather the general foundation for the interpretation of 
+measurement techniques used in electro-catalysis research as described in the introduction.
+%
+Accompanied by the development
 and implementation  of thermodynamically consistent  numerical methods
 and codes, this improved theory of reactive polycrystalline electrodes
 shall support  the modeling  of yet  not sufficiently  well understood
@@ -215,7 +238,8 @@ introduction.
   fhelen 36PM Doktorand...}
 
 \todo{Wenn  es komplett neu sein soll:  solar hydrogen - coupling to Perovskites ? -> Koop mit
-  LG5, FU, Matera, Unisyscat, HZB, das war auch schon mal für Math+ angedacht.}
+  LG5, FU, Matera, Unisyscat, HZB, das war auch schon mal für Math+ angedacht.
+  RM: das sollte als ein Aspekt dazu}
 
 
 % - Intended methodologies
@@ -223,37 +247,42 @@ introduction.
 The starting point  of the model development is  a general description
 for the rate  equations of electrochemical reactions and their coupling to the bulk mass transport
 and electrostatic potential at a homogeneous
-electrode- electrolyte  interfaces based on the generalized Nernst-Planck-Poisson equations. Averaging methods as  developed in
+electrode- electrolyte  interfaces based on the generalized Nernst-Planck-Poisson equations.
+To account for non-constant dielectric susceptibility, the structure of the chemical potentials
+needs to be extended in a thermodynamically consistent way.
+Averaging methods as  developed in
 \cite{JES}  are   extended  in   order  provide  rate   equations  for
 polycrystalline interfaces  and their respective coupling to the bulk processes.
 
 The modeling process is accompanied by the a numerical implementation based on the
 thermodynamically consistent finite volume methods developed in RG3.
-On one hand, this implementation will allow to verfiy the modeling process. On the other
+On one hand, this implementation will allow to verify the modeling process. On the other
 hand the resulting code will be ready to be used in the context of experimental verification.
 The development of the numerical schemes will be accompanied by the further investigations
 on their thermodynamic consistency and the convergence.
 
-Drawing on the vast experience with the use of finite volumes schemes for drift-diffusion systems,
-and based on recent comparison results for different variants of generalized Schafetter-Gummel
-schemes, first successful implementations in Julia \cite{VagnerEtAl2019, VoronoiFVM}
-the numerical models will be implemented in  Julia, significantly, utilizing forward mode automatic
-differentiation to significantrly reduce the implementation
+The project can draw on a vast experience with the use of finite volumes schemes for drift-diffusion systems,
+as e.g. recent comparison results for different variants of generalized Schafetter-Gummel
+schemes, first successful implementations in Julia \cite{VagnerEtAl2019, VoronoiFVM}.
+The numerical models will be implemented in  Julia, utilizing forward mode automatic
+differentiation to significantly reduce the implementation
 effort for strongly nonlinear problems \cite{VoronoiFVM}, reducing the code complexity compared
-to C++ and allowing for easy distribution of the code based on package management leading the
-state of the art.
+to C++ and allowing for easy distribution of the code based on a modern package management system.
 
 \paragraph{Main Contributions}
 % Please include here BOTH:
 % - Impact on mathematics
 The project will result in extended bulk-surface models for electrochemical systems which provide
-an ample field for further investigation in analysis and numerics. Upscaling and averaging methods
-for surface rate equations developed in the project may be interesting in other applications.
+an ample field for further investigation in analysis and numerics. 
+Classical electrolyte theory including Debye-H\"uckel theory will be generalized.
+Upscaling and averaging methods
+for surface rate equations developed in the project are of interest in other applications.
 
 % - Benefit to application area/emerging field
 \begin{itemize}
 \item Cooperation on modeling and numerics for complex coupled drift-diffusion systems, PDE
   discretization and solution techniques, implementation
+\item consistent coupling of electric, thermal and mechanic effects
 \end{itemize}
 
 
@@ -261,7 +290,7 @@ for surface rate equations developed in the project may be interesting in other 
 % Please consider the following aspects:
 % - Describe the scientific novelties of the project compared to the state-of-the-art in the field of the project.
 The establishment of material models for heterogeneously structured electrocatalytically active surfaces
-provides the possibility of experimental comparison with non-single crystal multi-material electrodes
+provides the possibility of experimental comparison with polycrystalline or  multi-material electrodes
 as they occur in electrochemical experimentation and in real world devices.
 
 % - Highlight the long term research or application perspectives which will be opened by your project.
@@ -272,9 +301,11 @@ the National Hydrogen Initiative.
 % - Address potential future research questions / problem complexes which may be approached based on the results upon completion of the project work.
 \begin{itemize}
 \item Mathematical and numerical  analysis  of the the developed model framework
-\item Applications for various different electolyte-Interface systems
+\item Applications for various different electolyte-interface systems
 \end{itemize}
-
+\todo{RM: $\bullet$ optimization of electrocatalytic processes
+$\bullet$ improved resolution of STM 
+$\bullet$ characterization and identification of real electrode surfaces}
 
 %\nocite{*} % remove this line if you only want to show cited references
 \bibliographystyle{mathplusplainyr}
@@ -316,13 +347,13 @@ the National Hydrogen Initiative.
 % MATH+. Sort as follows:
 % - Additional Funding (Further funding of research themes related to this project)
 We see a good perspective for additional funding based on the modeling and simulation approach
-teveloped in this project.
+developed in this project.
 
 % - Research Training (Summer schools, etc.)
 Results and approached from the project will be used in the 
 
 % - Gender and Diversity (Activities for female students, etc.)
-We will paricipate education of a diverse group of people in the teaching activities
+We will participate education of a diverse group of people in the teaching activities
 
 % - Complementary Skills (Opportunities for project staff to acquire skills complementing existing ones)
 Obtain further skills in numerical methods and their implementation, unique skills in electrochemical
