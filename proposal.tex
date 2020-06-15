@@ -65,7 +65,13 @@
 
 %%%%% SHORT SUMMARY
 % Please add a short summary of your project using a maximum of 100 words or 5 lines!!!
-\projectShortSummary{Here comes the short summary of at most 100 words or 5 lines of text!}
+\projectShortSummary{Complex, multi-materail electrocatylysts are crucial in many
+  applications relevant for the energy transition. Their model based understanding
+  will increase the efficiency  and scalability  of electrocatalytic processes.
+  Building on the results of the first project period focused on
+  thermodynamic equilibrium, modeling an numerical methods  shall be extended to the non-equilibrium case of
+  complex surface reactions.
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAIN CONTENT
@@ -73,7 +79,6 @@
 \begin{document}
 
 \insertProjectHeader
-\todo{JF: Denselben Titel zu haben, ist ggf keine gute Idee}
 
 
 \subsection*{Extended Synopsis of the Proposal}
@@ -84,9 +89,7 @@
 
 % - Account of the problem
 % - Motivation
-Better theoretical understanding of complex electrocatalytic reactions is
-crucial in order to increase the efficiency  and scalability  of electrocatalytic processes
-and is therefore a highly relevant topic of research.
+
 The pivotal strategic importance of  technologies based on electrocatalytic reactions
 is underlined in  the  recently  approved  National Hydrogen  Strategy of  the  German
 Federal  Government. This initiative  grants  hydrogen,  and  in   particular  ``green
@@ -100,8 +103,6 @@ hydrogen  from  electrical energy  in  electrolyzers  and the  reverse
 process --  the recovery  of electrical energy  from hydrogen  in fuel
 cells -- are seen  as indispensable technologies whose development
 shall be  supported by  R\&D investments  and market  incentives.
-\todo{JF: Die Wasserstoffstrategie ist stark markt- und Technologieorientiert,
-  und gibt nicht mehr konkretes zu F\&E her...}
 %
 Both technologies are based  on electrocatalytic reactions. Production
 and utilization  of hydrogen are just  two examples for this  class of
@@ -123,10 +124,9 @@ STM (Scanning Tunneling Microscopy),
 SEM (Scanning  Electrochemical Microscopy),
 AFM (Atomic Force Microscopy), 
 EIS (Electrochemical Impedance Spectroscopy).
-\todo{Diesen Abschnitt ggf.umformulieren (kopiert aus altem Antrag)}
 
 In order  to interpret  the experimental  results, and  to understand,
-predict and optimize electrocatalytic  systems, mathematical models of
+predict and optimize electrocatalytic  systems, mathematical models on various scales and of
 various  levels of  accuracy have to be used. Depending  on the  level of  complexity,
 modeling  results  can  be  expressed using  analytic  expressions  or
 need to be obtained via numerical simulation.
@@ -146,13 +146,11 @@ Nernst-Planck models similar to those derived at WIAS.
 All these approaches are based on homogeneous interfaces with no variation in their
 spatial  structure. They  do   not  take  into  account  the
 heterogeneity   of   the   electrochemical  interfaces   due   to   the
-polycrystalline structure  of the  catalyst, the restructuring  of the
+polycrystalline structure  of the catalyst, the restructuring  of the
 catalyst surfaces depending  on various stages of the  reaction or due
 to defects like steps that create spots of increased activity.
 Moreover, these activities are lacking a strategy to upscale the nanoscale
 results to the macrocscale of real experimental or practical devices.
-
-
 
 % - Preliminary work by the PIs
 WIAS research group  RG7 represented by PI M. Landstorfer is active
@@ -170,11 +168,11 @@ theory coupled to the bulk thermodynamics have been developed
 WIAS reserch group RG3 represented by PI J. Fuhrmann contributes to the numerical modeling of electrochemical systems,
 including the derivation of a thermodynamically consistent finite volume  method \cite{JF2016} implementing
 the model \cite{DGL2014}. A similar discretization approach is used for the simulation
-of solide oxide electrolytes \cite{VagnerEtAl2019}. Convergence investigations for different finite volume
-schemes in the unipolar case have been  provided in \cite{CCFG2020}. The finite volume method for
+of solide oxide electrolytes \cite{VagnerEtAl2019}. Convergence investigations for different flux
+thermodynamically consistent flux expressions of  finite volume
+schemes for unipolar drift-diffusion models  have been  performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for
 ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow
-\cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}.
-
+\cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
 
 Recent work  supported by  Math+  \cite{JES} provides first  results with
 respect to the application of the improved electrochemical double layer
@@ -198,18 +196,24 @@ a stochastic description of complex real polycrystalline surfaces.
  \label{fig:JES}}
 \end{figure}
 
-
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{ccfg.pdf}
+  \includegraphics[width=0.4\textwidth]{iceo.pdf}
+   \caption{Left and mid: time evolution of electorstatic potential and concentration for
+  a unipolar Nernst-Planck-Poisson system with volume constraints. The concentrations $c$
+  stays in the physical limits $0<c<1$ \cite{CCFG2020}.
+  Right: induced charge electroosmotic flow over a floating electrode induced by a lateral
+  electric field \cite{FuhrmannEtAlECActa2019}. \label{fig:fv}}
+\end{figure}
 
 
 \paragraph{Goals of the Project and Methodologies}
 % Please include here:
 % - Goals of the project
 
-The results for polycrystalline electrodes  so far are confined to the
-case of  thermodynamic equilibrium  and ideally  polarizing electrodes
-(without  reactions). They  are an  excellent starting  point for  the
-developmennt of  a more general theory  which includes electrochemical
-reactions at polycrystalline surfaces. 
+The results for polycrystalline electrodes so far are confined to the case of thermodynamic equilibrium and ideally polarizing electrodes (without reactions).
+They are an excellent starting point for the developmennt of a more general theory which includes electrochemical reactions at polycrystalline surfaces.
 In particular, the achieved results provide valuable hints about the most relevant extensions of the modeling framework in order to describe electrocatalytic reactions.
 For example the dielectric susceptibility should depend on the local electrolytic concentration
 and the temperature. 
@@ -220,7 +224,7 @@ should lead to effective description of the reactions on a more macroscoptic sca
 and extend the stochastic characterization of the polycrystalline electrodes in equilibrium
 to the non-equilibrium case.
 %
-Spatial resolved simulation of the model provides potential surfaces at
+Spatially resolved simulation of the model provides potential surfaces at
 some given distance from the electrode surface, essentially corresponding to experimental STM measurements. 
 The numerical solution of the transient system allows to simulate CV and to compute the corresponding current--voltage curve. 
 This modeling approach is not restricted to CV and STM, but rather the general foundation for the interpretation of 
@@ -233,13 +237,10 @@ shall support  the modeling  of yet  not sufficiently  well understood
 features  of experimental  results, with  a possible  outreach to  the
 modeling  and simulation  of real  world systems  as described  in the
 introduction.
-\todo{Dies ist faktisch eine Wiederholung des alten Antrags, der ja
-  darauf basierte, dass wir 2 stellen bekommen. Zu seiner Realisierung
-  fhelen 36PM Doktorand...}
 
-\todo{Wenn  es komplett neu sein soll:  solar hydrogen - coupling to Perovskites ? -> Koop mit
-  LG5, FU, Matera, Unisyscat, HZB, das war auch schon mal für Math+ angedacht.
-  RM: das sollte als ein Aspekt dazu}
+% \todo{Wenn  es komplett neu sein soll:  solar hydrogen - coupling to Perovskites ? -> Koop mit
+%   LG5, FU, Matera, Unisyscat, HZB, das war auch schon mal für Math+ angedacht.
+%   RM: das sollte als ein Aspekt dazu}
 
 
 % - Intended methodologies
@@ -261,13 +262,15 @@ hand the resulting code will be ready to be used in the context of experimental 
 The development of the numerical schemes will be accompanied by the further investigations
 on their thermodynamic consistency and the convergence.
 
-The project can draw on a vast experience with the use of finite volumes schemes for drift-diffusion systems,
-as e.g. recent comparison results for different variants of generalized Schafetter-Gummel
-schemes, first successful implementations in Julia \cite{VagnerEtAl2019, VoronoiFVM}.
+The project can draw on a long-time experience with the use of finite volumes schemes for drift-diffusion systems.
 The numerical models will be implemented in  Julia, utilizing forward mode automatic
 differentiation to significantly reduce the implementation
 effort for strongly nonlinear problems \cite{VoronoiFVM}, reducing the code complexity compared
 to C++ and allowing for easy distribution of the code based on a modern package management system.
+This implementation will draw on first successful Julia based computational results
+for  different variants of generalized Schafetter-Gummel
+schemes \cite{CCFG2020,VagnerEtAl2019} based on a new Julia package for finite volume methods \cite{VoronoiFVM}.
+
 
 \paragraph{Main Contributions}
 % Please include here BOTH:
@@ -302,10 +305,10 @@ the National Hydrogen Initiative.
 \begin{itemize}
 \item Mathematical and numerical  analysis  of the the developed model framework
 \item Applications for various different electolyte-interface systems
+\item optimization of electrocatalytic processes
+\item improved resolution of STM
+\item characterization and identification of real electrode surfaces
 \end{itemize}
-\todo{RM: $\bullet$ optimization of electrocatalytic processes
-$\bullet$ improved resolution of STM 
-$\bullet$ characterization and identification of real electrode surfaces}
 
 %\nocite{*} % remove this line if you only want to show cited references
 \bibliographystyle{mathplusplainyr}
@@ -320,18 +323,23 @@ $\bullet$ characterization and identification of real electrode surfaces}
 \paragraph{Collaborations}
 % Please list existing or planned cooperation (scientific, industrial, ...),
 % both internal and external. Sort as follows:
-% - Internal cooperation (within MATH+)
+
+Internal cooperation (within MATH+)
 \begin{itemize}
 \item Glitzky ...
 \item Farrell ...
 \item weiteres noch zu klären
 \end{itemize}
 
-% - External scientific cooperation (outside MATH+)
+External scientific cooperation (outside MATH+)
 \begin{itemize}
-\item Fortschreibung der Kooeprationen aus dem alten Antrag ?
+\item GGf. UniSysCat, HZB zu Photoelektrochemie
 \end{itemize}
-% - External industrial cooperation (outside MATH+)
+
+External industrial cooperation (outside MATH+)
+\begin{itemize}
+\item Fortschreibung der Kooperationen aus dem alten Antrag ?
+\end{itemize}
 
 \paragraph{Related Projects}
 % Please include your funded projects which are topicwise related to this proposal.
