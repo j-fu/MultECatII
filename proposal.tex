@@ -28,6 +28,10 @@
 
 \newcommand{\bibfilename}{mrabbrev,mybibfile} % <- replace 'mybibfile' with basename of your bibfile
 
+\usepackage[labeled,resetlabels]{multibib}
+\newcites{P}{{\normalsize  Publications of PIs and project members}}
+\newcites{O}{{\normalsize  Publications of other researchers}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FILL OUT PROJECT INFORMATION
@@ -94,34 +98,16 @@
 
 % - Account of the problem
 
-The pivotal strategic importance of  technologies based on electrocatalytic reactions
-is underlined in  the  recently  approved  National Hydrogen  Strategy of  the  German
-Federal  Government. This initiative  grants  hydrogen,  and  in   particular  ``green
-hydrogen''  created with  renewable  energy a  strategic  role in  the
-decarbonization of the economy as an energy carrier, an energy storage
-option, a  sector coupling  technology, a  precursor for  the chemical
-industry  and a  means  for  CO2  emission reduction  in  various
-industrial  processes. 
-As  a part  of this  strategy, the  creation of
-hydrogen  from  electrical energy  in  electrolyzers  and the  reverse
-process --  the recovery  of electrical energy  from hydrogen  in fuel
-cells -- are seen  as indispensable technologies whose development
-shall be  supported by  R\&D investments  and market  incentives.
+The pivotal strategic importance of technologies based on electrocatalytic reactions is underlined in the recently approved National Hydrogen Strategy of the German Federal Government.  This initiative grants hydrogen, and in particular ``green hydrogen'' created with renewable energy a strategic role in the decarbonization of the economy as an energy carrier, an energy storage option, a sector coupling technology, a precursor for the chemical industry and a means for CO2 emission reduction in various industrial processes.
+As a part of this strategy, the creation of hydrogen from electrical energy in electrolyzers and the reverse process -- the recovery of electrical energy from hydrogen in fuel cells -- are seen as indispensable technologies whose development shall be supported by R\&D investments and market incentives.
 %
-Both technologies are based  on electro-catalytic reactions. Production
-and utilization  of hydrogen are just  two examples for this  class of
-reactions, other  electro-catalytic reactions  are fundamental  in post
-lithium  batteries,  material  synthesis  and  other  fields. 
+Both technologies are based on electro-catalytic reactions. Production and utilization of hydrogen are just two examples for this class of reactions, other electro-catalytic reactions are fundamental in post lithium batteries, material synthesis and other fields.
 
 % - Motivation
 The main driving forces for the rapid development of these technologies are (i) the synthetization of new electrode and electrolyte materials (e.g. ionic liquids and perovskites) (ii) the fabrication of nano-structured and composite electro-catalyitc surfaces (multi-material catalysts) and (iii) material and operational optimization. Central goal is to reduce cost, the main issue of large scale electro-catalysis due to high amount of expensive raw materials which are yet required (especially Pt and Pd). The Berlin based cluster of excellence UniSysCat, for example, searches for substitutions of these expensive materials.
 
 % - Background
 Investigations of electro-catalytic reactions on new materials  
-%is one of  the main areas
-%of research  in electrochemistry.  These  reactions take place  at the
-%interface between  (mostly metallic)  catalysts and  electrolytes.
-%They  are investigated  by a
 are carried out by a number of  experimental techniques,  e.g.
 RRDE    (Rotating   Ring    Disc   Electrode),   
 % DEMS   (Differential Electrochemical  Mass  Spectroscopy), 
@@ -131,74 +117,27 @@ STM (Scanning Tunneling Microscopy),
 SEM (Scanning  Electrochemical Microscopy),
 AFM (Atomic Force Microscopy), 
 EIS (Electrochemical Impedance Spectroscopy).
+
 % - State of the art of research in this area
 
-In order  to interpret  the experimental  results, and to understand,
-predict and optimize electro-catalytic systems, various mathematical models
-%on various scales and of
-%various  levels of  accuracy 
-have to be used. Depending  on the  level of  complexity,
-modeling  results  can  be  expressed using  analytic  expressions  or
-need to be obtained via numerical simulation.
+In order to interpret the experimental results, and to understand, predict and optimize electro-catalytic systems, various mathematical models have to be used. Depending on the level of complexity, modeling results can be expressed using analytic expressions or need to be obtained via numerical simulation.
 
+Recent research by internationally leading groups more and more focuses on the interplay between mass transport, reactions and the electric field on the nanoscale, resolving double layer effects \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}.
 
-% Showing the  relevance of mathematical and  numerical modeling, 
-Recent research by  internationally leading groups  more and
-more focuses  on the  interplay between  mass transport, reactions and the 
-electric    field    on   the     nanoscale, resolving double layer effects \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}.
-%
-%The    authors    of
-%\cite{lin2019understanding}          and         \cite{tan2018double},
-%\cite{eden2019modeling} focus on models and simulation of these processes
-%at nanoparticles or homogeneous  (single crystalline) electrodes based
-%on     classical    Nernst-Planck     models.    The     authors    of
-%\cite{bohra2019modeling} work in the  same direction using generalized
-%Nernst-Planck models similar to those derived at WIAS.
-
-All these approaches are based on homogeneous interfaces with no variation in their
-spatial  structure. Especially they  do   not  take  into surface inhomogenities, which lead to variations on the electro-chemical activity. 
-%heterogeneity   of   the   electrochemical  interfaces   due 
-%to   the
-%\emph{e.g.} due to a polycrystalline structure  of the catalyst, the restructuring  of the
-%catalyst surfaces depending  on various stages of the  reaction or due
-%to defects like steps that create spots of increased activity.
-%Moreover, these activities are lacking a strategy to upscale the nanoscale
-%results to the macrocscale of real experimental or practical devices.
+All these approaches are based on homogeneous interfaces with no variation in their spatial structure. Especially they do not take into surface inhomogenities, which lead to variations on the electro-chemical activity.
 
 % - Preliminary work by the PIs
-WIAS research group  RG7 represented by PI M. Landstorfer is active
-in the development of mathematical models for electrochemical systems.
-A seminal result is in the derivation of a comprehensive electrolyte model 
-%which takes into account finite ion sizes, solvation effects and the influence of pressure.
-%This model provides an 
-which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes. % of the double layer differential capacity of single crystal electrodes. % with respect to the applied voltage and
-%with respect to the salt concentration.
-%layers  and is  able to  predict qualitatively and in the correct quantitative range thedifferential capacity of single crystal electrodes with respect to the applied voltage and
-%with respect to the salt concentration. 
-Based on this, thermodynamically consistent boundary conditions for electro-chemical reactions at electrode surfaces derived from  surface thermodynamics at the electrode-electrolyte interface have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
 
-WIAS reserch group RG3 represented by PI J. Fuhrmann contributes to the numerical modeling of electrochemical systems,
-including the derivation of a thermodynamically consistent finite volume  method \cite{JF2016} implementing
-the model \cite{DGL2014}. A similar discretization approach is used for the simulation
-of solide oxide electrolytes \cite{VagnerEtAl2019}. Convergence investigations for different flux
-thermodynamically consistent flux expressions of  finite volume
-schemes for unipolar drift-diffusion models  have been  performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for
-ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow
-\cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
-The Julia language allows to utilize forward mode automatic differentiation to significantly reduce the implementation effort for strongly nonlinear problems reducing to reduce code complexity compared to C++ and to allow for easy distribution of the code based on a modern package management system.
-The computational  results  in  \cite{CCFG2020,VagnerEtAl2019} have been obtained by the  new Julia package for finite volume methods \cite{VoronoiFVM} developed by the PI.
+WIAS research group RG7 represented by PI M. Landstorfer is active in the development of mathematical models for electrochemical systems.  A seminal result is in the derivation of a comprehensive electrolyte model which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes.
+Based on this, thermodynamically consistent boundary conditions for electro-chemical reactions at electrode surfaces derived from surface thermodynamics at the electrode-electrolyte interface have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
+
+WIAS reserch group RG3 represented by PI J. Fuhrmann contributes to the numerical modeling of electrochemical systems, including the derivation of a thermodynamically consistent finite volume method \cite{JF2016} implementing the model \cite{DGL2014}. A similar discretization approach is used for the simulation of solide oxide electrolytes \cite{VagnerEtAl2019}.
+Convergence investigations for different flux thermodynamically consistent flux expressions of finite volume schemes for unipolar drift-diffusion models have been performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow \cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
+The Julia language allows to utilize forward mode automatic differentiation to significantly reduce the implementation effort for strongly nonlinear problems reducing to reduce code complexity compared to C++ and to allow for easy distribution of the code based on a modern package management system.  The computational results in \cite{CCFG2020,VagnerEtAl2019} have been obtained by the new Julia package for finite volume methods \cite{VoronoiFVM} developed by the PI.
 
 
 
 Recently published work\cite{JES}, supported by Math+ within the project MultECat, provides first results on modeling, simulation and validation of electro-chemical interfaces on polycrystalline materials (see Fig. \ref{fig:JES}). In addition a methodological approach to handle realistic multi-material surfaces was developed, allowing for a stochastic description of polycrystalline surfaces. Additional results on Debye--Hückel theory, concentration dependent susceptibilities, and electrolyte transport are in the final stage of publication. % HIER DIE ARBEITEN IN PREP HIn
-
-%with
-%respect to the application of the improved electrochemical double layer
-%theory to the case of polycrystalline  electrodes. Based on the assumption of large
-%grain sizes compared to the Debye length, characteristic data of the electorchemical double layer,
-%like charge, capacitance and potential of zero charge of a polycrystalline electrode can be derived from  the corresponding data
-%for the different kinds of grains weighted with their respective surface fraction,
-%see Fig. \ref{fig:JES}. 
 
 \begin{figure}
   \centering
@@ -244,7 +183,7 @@ Model adaptivity strategies shall provide efficient ways to handle the different
 
 \paragraph{Main Contributions}
 The envisioned modeling framework will allow to set up analytical and numerical simulation models for multi-material electrocatalytic systems  which in addition include features of electrochemical measurement processes, e.g. voltage cycling for CV or extraction of potential surfaces for STM.
-The simulation  models shall be used to create series of prototypical synthetical measurement data which will be published in order be able to acquaint experimentalists with the modeling and simulation approach developed in the project and to serve as starting points for cooperation projects. Data publication preferably will  use the infrastructure developed in the framework of the NFDI4Cat consortium of the German recommended for funding under the National Research Data Initiative (NDFI), provisionally allowing to access measurement data by other groups.
+The simulation  models shall be used to create series of prototypical synthetical measurement data which will be published in order be able to acquaint experimentalists with the modeling and simulation approach developed in the project and to serve as starting points for cooperation projects. Data publication preferably will  use the infrastructure developed in the framework of the NFDI4Cat consortium of the German recommended for funding under the National Research Data Initiative (NDFI) \cite{NFDI4Cat}, provisionally allowing to access measurement data by other groups.
 
 The project will result in extended bulk-surface models for electrochemical systems which provide an ample field for further investigation in analysis and numerics. 
 Classical electrode theory based on the Butler-Volmer equation will be generalized.  Upscaling and averaging methods for surface rate equations developed in the project are of interest in other applications.
@@ -279,6 +218,12 @@ the National Hydrogen Initiative.
 \bibliographystyle{mathplusplainyr}
 \bibliography{mybibfile}
 
+% \bibliographystyleP{matheonplainyr}
+% \bibliographyP{mybibfile}
+% \bibliographystyleO{matheonplainyr}
+% \bibliographyO{mybibfile}
+
+
 % This is needed for multiple bib-files
 % \printbibliography[heading=none]
 % \printbibliography[keyword={reflist},heading=none]
@@ -312,7 +257,9 @@ External industrial cooperation (outside MATH+)
 \begin{itemize}
 \item EDLSOC: solid electrolytes, non-isothermal
 \item LuCaMag: not focused on multi-material
-\item Malli2: 
+\item Coupled atomistic and nanofluidic simulations for electrocatalysis (PhD project
+  in the  Berlin International Graduate School for Natural Science and Engineering (BIG-NSE) )
+\item Malli2:
 \end{itemize}
 
 \paragraph{Further Impact of the Project on MATH$+$}
