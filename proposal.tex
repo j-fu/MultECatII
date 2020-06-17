@@ -85,10 +85,14 @@
 
 \paragraph{Background}
 % Please include here:
-% use \cite{} to reference publications
-
 % - Account of the problem
 % - Motivation
+% - Background
+% - State of the art of research in this area
+% - Preliminary work by the PIs
+
+
+% - Account of the problem
 
 The pivotal strategic importance of  technologies based on electrocatalytic reactions
 is underlined in  the  recently  approved  National Hydrogen  Strategy of  the  German
@@ -104,18 +108,21 @@ process --  the recovery  of electrical energy  from hydrogen  in fuel
 cells -- are seen  as indispensable technologies whose development
 shall be  supported by  R\&D investments  and market  incentives.
 %
-Both technologies are based  on electrocatalytic reactions. Production
+Both technologies are based  on electro-catalytic reactions. Production
 and utilization  of hydrogen are just  two examples for this  class of
-reactions, other  electrocatalytic reactions  are fundamental  in post
+reactions, other  electro-catalytic reactions  are fundamental  in post
 lithium  batteries,  material  synthesis  and  other  fields. 
 
+% - Motivation
+The main driving forces for the rapid development of these technologies are (i) the synthetization of new electrode and electrolyte materials (e.g. ionic liquids and perovskites) (ii) the fabrication of nano-structured and composite electro-catalyitc surfaces (multi-material catalysts) and (iii) material and operational optimization. Central goal is to reduce cost, the main issue of large scale electro-catalysis due to high amount of expensive raw materials which are yet required (especially Pt and Pd). The Berlin based cluster of excellence UniSysCat, for example, searches for substitutions of these expensive materials.
 
-
-% - State of the art of research in this area
-Investigation of electrocatalytic  reactions is one of  the main areas
-of research  in electrochemistry.  These  reactions take place  at the
-interface between  (mostly metallic)  catalysts and  electrolytes.
-They  are investigated  by a  number of  experimental techniques,  e.g.
+% - Background
+Investigations of electro-catalytic reactions on new materials  
+%is one of  the main areas
+%of research  in electrochemistry.  These  reactions take place  at the
+%interface between  (mostly metallic)  catalysts and  electrolytes.
+%They  are investigated  by a
+are carried out by a number of  experimental techniques,  e.g.
 RRDE    (Rotating   Ring    Disc   Electrode),   
 % DEMS   (Differential Electrochemical  Mass  Spectroscopy), 
 CV  (Cyclic  Voltammetry),  
@@ -124,46 +131,51 @@ STM (Scanning Tunneling Microscopy),
 SEM (Scanning  Electrochemical Microscopy),
 AFM (Atomic Force Microscopy), 
 EIS (Electrochemical Impedance Spectroscopy).
+% - State of the art of research in this area
 
-In order  to interpret  the experimental  results, and  to understand,
-predict and optimize electrocatalytic  systems, mathematical models on various scales and of
-various  levels of  accuracy have to be used. Depending  on the  level of  complexity,
+In order  to interpret  the experimental  results, and to understand,
+predict and optimize electro-catalytic systems, various mathematical models
+%on various scales and of
+%various  levels of  accuracy 
+have to be used. Depending  on the  level of  complexity,
 modeling  results  can  be  expressed using  analytic  expressions  or
 need to be obtained via numerical simulation.
 
 
 % Showing the  relevance of mathematical and  numerical modeling, 
 Recent research by  internationally leading groups  more and
-more focuses  on the  interplay between  mass transport,  reaction and
-electric    field    at    the     nanoscale, resolving double layer effects.
-The    authors    of
-\cite{lin2019understanding}          and         \cite{tan2018double},
-\cite{eden2019modeling} focus on models and simulation of these processes
-at nanoparticles or homogeneous  (single crystalline) electrodes based
-on     classical    Nernst-Planck     models.    The     authors    of
-\cite{bohra2019modeling} work in the  same direction using generalized
-Nernst-Planck models similar to those derived at WIAS.
+more focuses  on the  interplay between  mass transport, reactions and the 
+electric    field    on   the     nanoscale, resolving double layer effects \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}.
+%
+%The    authors    of
+%\cite{lin2019understanding}          and         \cite{tan2018double},
+%\cite{eden2019modeling} focus on models and simulation of these processes
+%at nanoparticles or homogeneous  (single crystalline) electrodes based
+%on     classical    Nernst-Planck     models.    The     authors    of
+%\cite{bohra2019modeling} work in the  same direction using generalized
+%Nernst-Planck models similar to those derived at WIAS.
+
 All these approaches are based on homogeneous interfaces with no variation in their
-spatial  structure. They  do   not  take  into  account  the
-heterogeneity   of   the   electrochemical  interfaces   due   to   the
-polycrystalline structure  of the catalyst, the restructuring  of the
-catalyst surfaces depending  on various stages of the  reaction or due
-to defects like steps that create spots of increased activity.
-Moreover, these activities are lacking a strategy to upscale the nanoscale
-results to the macrocscale of real experimental or practical devices.
+spatial  structure. Especially they  do   not  take  into surface inhomogenities, which lead to variations on the electro-chemical activity. 
+%heterogeneity   of   the   electrochemical  interfaces   due 
+%to   the
+%\emph{e.g.} due to a polycrystalline structure  of the catalyst, the restructuring  of the
+%catalyst surfaces depending  on various stages of the  reaction or due
+%to defects like steps that create spots of increased activity.
+%Moreover, these activities are lacking a strategy to upscale the nanoscale
+%results to the macrocscale of real experimental or practical devices.
 
 % - Preliminary work by the PIs
 WIAS research group  RG7 represented by PI M. Landstorfer is active
-in the development of thermodynamically correct models of electrochemical systems.
-A seminal result is in the derivation of a comprehensive electrolyte model which takes into account finite
-ion sizes, solvation and the influence of the pressure.
-This model provides an accurate description of electrochemical double
-layers  and is  able to  predict qualitatively and in the correct quantitative range the
-differential capacity of single crystal electrodes with respect to the applied voltage and
-with respect to the salt concentration. In addition,  a thermodynamically consistent
-description of electrochemical reactions at electrode surfaces based on a surface thermodynamics
-theory coupled to the bulk thermodynamics have been developed
-\cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
+in the development of mathematical models for electrochemical systems.
+A seminal result is in the derivation of a comprehensive electrolyte model 
+%which takes into account finite ion sizes, solvation effects and the influence of pressure.
+%This model provides an 
+which provides an accurate description of the electrochemical double and yields broad accordance to experimental data of single crystal electrodes. % of the double layer differential capacity of single crystal electrodes. % with respect to the applied voltage and
+%with respect to the salt concentration.
+%layers  and is  able to  predict qualitatively and in the correct quantitative range thedifferential capacity of single crystal electrodes with respect to the applied voltage and
+%with respect to the salt concentration. 
+Based on this, thermodynamically consistent boundary conditions for electro-chemical reactions at electrode surfaces based on a surface thermodynamics have been developed on the basis of surface thermodynamics \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
 
 WIAS reserch group RG3 represented by PI J. Fuhrmann contributes to the numerical modeling of electrochemical systems,
 including the derivation of a thermodynamically consistent finite volume  method \cite{JF2016} implementing
@@ -174,14 +186,15 @@ schemes for unipolar drift-diffusion models  have been  performed in \cite{CCFG2
 ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow
 \cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
 
-Recent work  supported by  Math+  \cite{JES} provides first  results with
-respect to the application of the improved electrochemical double layer
-theory to the case of polycrystalline  electrodes. Based on the assumption of large
-grain sizes compared to the Debye length, characteristic data of the electorchemical double layer,
-like charge, capacitance and potential of zero charge of a polycrystalline electrode can be derived from  the corresponding data
-for the different kinds of grains weighted with their respective surface fraction,
-see Fig. \ref{fig:JES}. This approach opens the way to
-a stochastic description of complex real polycrystalline surfaces.
+Recently published work\cite{JES}, supported by Math+ within the project MultECat, provides first results on modeling, simulation and validation of electro-chemical interfaces on polycrystalline materials (see Fig. \ref{fig:JES}). In addition a methodological approach to handle realistic multi-material surfaces was developed, allowing for a stochastic description of polycrystalline surfaces. Additional results on Debye--Hückel theory, concentration dependent susceptibilities, and electrolyte transport are in the final stage of publication. % HIER DIE ARBEITEN IN PREP HIn
+
+%with
+%respect to the application of the improved electrochemical double layer
+%theory to the case of polycrystalline  electrodes. Based on the assumption of large
+%grain sizes compared to the Debye length, characteristic data of the electorchemical double layer,
+%like charge, capacitance and potential of zero charge of a polycrystalline electrode can be derived from  the corresponding data
+%for the different kinds of grains weighted with their respective surface fraction,
+%see Fig. \ref{fig:JES}. 
 
 \begin{figure}
   \centering
@@ -212,13 +225,17 @@ a stochastic description of complex real polycrystalline surfaces.
 % Please include here:
 % - Goals of the project
 
-The results for polycrystalline electrodes so far are confined to the case of thermodynamic equilibrium and ideally polarizing electrodes (without reactions).
-They are an excellent starting point for the developmennt of a more general theory which includes electrochemical reactions at polycrystalline surfaces.
-In particular, the achieved results provide valuable hints about the most relevant extensions of the modeling framework in order to describe electrocatalytic reactions.
-For example the dielectric susceptibility should depend on the local electrolytic concentration
-and the temperature. 
-Oxide formation on inhomogeneous electrode surfaces can be modeled
-by non-monotonous potentials.
+Our recent results on modeling multi-material and polycrystalline electrodes-electrolyte interfaces are confined to the case of thermodynamic equilibrium without charge transfer reactions. This experimentally validated model framework is our starting point for the extension towards electro-catalytic reactions on heterogenous electro-catalytic surfaces.  
+
+%% AB HIER SOLLTE JETZT DER TEIL HIN DEN WIR VORHIN BESPROCHEN HABEN
+% -- BIS HIERHIN HAT ML ÜBERARBEITET
+
+%Additional interim results %Hier kommen die arbeiten in prep. hin 
+%particular, the achieved results provide valuable hints about the most relevant extensions of the modeling framework in order to describe electrocatalytic reactions.
+%For example the dielectric susceptibility should depend on the local electrolytic %concentration
+%and the temperature. 
+%Oxide formation on inhomogeneous electrode surfaces can be modeled
+%by non-monotonous potentials.
 The investigation of the dynamics of spatially inhomogeneous reacting surfaces
 should lead to effective description of the reactions on a more macroscoptic scale
 and extend the stochastic characterization of the polycrystalline electrodes in equilibrium
@@ -345,7 +362,7 @@ External industrial cooperation (outside MATH+)
 % Please include your funded projects which are topicwise related to this proposal.
 % State the main differences.
 \begin{itemize}
-\item EDLSOC: solid electorlytes, non-isothermal
+\item EDLSOC: solid electrolytes, non-isothermal
 \item LuCaMag: not focused on multi-material
 \item Malli2: 
 \end{itemize}
@@ -376,4 +393,20 @@ We will participate in public outreach activities
 Both PIs have tenure positions at Weierstrass Institute.
 
 \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Draft for discussion (JF)
+
+Goals: 
+- Rate models for electrocatalytic reactions taking into account polycrystalline electrode structures
+  and surface restructuring
+- Nanoscale (resolved boundary layers) and mesoscale (electroneutral) models for coupling reactant  transport and new reaction rate models
+- Coupling with charge carrier transport  in electrodes with semiconductor properties
+
+Methodologies
+- Averaging, homogenization, matching asymptotics
+- Verification by numerical simulation
+
+Main contributions:
+- Thermodynamically models for reactive multimaterial electrocatalytic interfaces out of equilibrium
+- Corresponding numerical models
 
