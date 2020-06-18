@@ -69,11 +69,11 @@
 
 %%%%% SHORT SUMMARY
 % Please add a short summary of your project using a maximum of 100 words or 5 lines!!!
-\projectShortSummary{Complex, multi-materail electrocatylysts are crucial in many
+\projectShortSummary{Complex, multi-materal electrocatalysts are crucial in many
   applications relevant for the energy transition. Their model based understanding
   will increase the efficiency  and scalability  of electrocatalytic processes.
   Building on the results of the first project period focused on
-  thermodynamic equilibrium, modeling an numerical methods  shall be extended to the non-equilibrium case of
+  thermodynamic equilibrium, modeling and numerical methods  shall be extended to the non-equilibrium case of
   complex surface reactions.
 }
 
@@ -120,24 +120,20 @@ EIS (Electrochemical Impedance Spectroscopy).
 
 % - State of the art of research in this area
 
-In order to interpret the experimental results, and to understand, predict and optimize electro-catalytic systems, various mathematical models have to be used. Depending on the level of complexity, modeling results can be expressed using analytic expressions or need to be obtained via numerical simulation.
+In order to interpret the experimental results, and to understand, predict and optimize electrocatalytic systems, various mathematical models have to be used. Depending on the level of complexity, modeling results can be expressed using analytic expressions or need to be obtained via numerical simulation. Recent research by internationally leading groups more and more focuses on the interplay between mass transport, reactions and the electric field on the nanoscale, resolving double layer effects in order to support expiermental interpretation \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}.
 
-Recent research by internationally leading groups more and more focuses on the interplay between mass transport, reactions and the electric field on the nanoscale, resolving double layer effects \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}.
-
-All these approaches are based on homogeneous interfaces with no variation in their spatial structure. Especially they do not take into surface inhomogenities, which lead to variations on the electro-chemical activity.
+All these approaches are based on homogeneous interfaces with no variation in their spatial structure. Especially they do not take into surface inhomogenities, which lead to variations on the electrochemical activity.
 
 % - Preliminary work by the PIs
 
-WIAS research group RG7 represented by PI M. Landstorfer is active in the development of mathematical models for electrochemical systems.  A seminal result is in the derivation of a comprehensive electrolyte model which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes.
-Based on this, thermodynamically consistent boundary conditions for electro-chemical reactions at electrode surfaces derived from surface thermodynamics at the electrode-electrolyte interface have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
 
-WIAS reserch group RG3 represented by PI J. Fuhrmann contributes to the numerical modeling of electrochemical systems, including the derivation of a thermodynamically consistent finite volume method \cite{JF2016} implementing the model \cite{DGL2014}. A similar discretization approach is used for the simulation of solide oxide electrolytes \cite{VagnerEtAl2019}.
-Convergence investigations for different flux thermodynamically consistent flux expressions of finite volume schemes for unipolar drift-diffusion models have been performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow \cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
-The Julia language allows to utilize forward mode automatic differentiation to significantly reduce the implementation effort for strongly nonlinear problems reducing to reduce code complexity compared to C++ and to allow for easy distribution of the code based on a modern package management system.  The computational results in \cite{CCFG2020,VagnerEtAl2019} have been obtained by the new Julia package for finite volume methods \cite{VoronoiFVM} developed by the PI.
+WIAS research group RG3 represented by PI J. Fuhrmann contributes to the numerical modeling and simulation of electrochemical systems. This includes  the derivation of a thermodynamically consistent finite volume method \cite{JF2016} for the electrolyte models \cite{DGL2014,VagnerEtAl2019}, implementations in Julia\cite{VoronoiFVM} and C++, as well as convergence investigations for different flux thermodynamically consistent flux expressions.   %implementing the model 
+ %A similar discretization approach is used for the simulation of solid oxide electrolytes \cite{VagnerEtAl2019}. Convergence investigations for different flux thermodynamically consistent flux expressions of finite volume schemes for unipolar drift-diffusion models have been performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow \cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
+%The Julia language allows to utilize forward mode automatic differentiation to significantly reduce the implementation effort for strongly nonlinear problems reducing to reduce code complexity compared to C++ and to allow for easy distribution of the code based on a modern package management system.  The computational results in \cite{CCFG2020,VagnerEtAl2019} have been obtained by the new Julia package for finite volume methods \cite{VoronoiFVM} developed by the PI.
 
+WIAS research group RG7 represented by PI M. Landstorfer is active in the development of mathematical models for electrochemical systems.  A seminal result is a comprehensive electrolyte model which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes. Based on this, thermodynamically consistent boundary conditions for electrochemical reactions at electrode surfaces have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
 
-
-Recently published work\cite{JES}, supported by Math+ within the project MultECat, provides first results on modeling, simulation and validation of electro-chemical interfaces on polycrystalline materials (see Fig. \ref{fig:JES}). In addition a methodological approach to handle realistic multi-material surfaces was developed, allowing for a stochastic description of polycrystalline surfaces. Additional results on Debye--Hückel theory, concentration dependent susceptibilities, and electrolyte transport are in the final stage of publication. % HIER DIE ARBEITEN IN PREP HIn
+Recently published work\cite{JES}, supported by Math+ within the project MultECat, provides first results on modeling, simulation and validation of electrochemical interfaces on polycrystalline materials (see Fig. \ref{fig:JES}). In addition a methodological approach to handle realistic multi-material surfaces was developed, allowing for a stochastic description of polycrystalline surfaces. Additional results on Debye--Hückel theory, concentration dependent susceptibilities, and electrolyte transport are in the final stage of publication. % HIER DIE ARBEITEN IN PREP HIn
 
 \begin{figure}
   \centering
@@ -152,45 +148,45 @@ Recently published work\cite{JES}, supported by Math+ within the project MultECa
  \label{fig:JES}}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{ccfg.pdf}
-  \includegraphics[width=0.4\textwidth]{iceo.pdf}
-   \caption{Left and mid: time evolution of electorstatic potential and concentration for
-  a unipolar Nernst-Planck-Poisson system with volume constraints. The concentrations $c$
-  stays in the physical limits $0<c<1$ \cite{CCFG2020}.
-  Right: induced charge electroosmotic flow over a floating electrode induced by a lateral
-  electric field \cite{FuhrmannEtAlECActa2019}. \label{fig:fv}}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=0.5\textwidth]{ccfg.pdf}
+%  \includegraphics[width=0.4\textwidth]{iceo.pdf}
+%   \caption{Left and mid: time evolution of electrostatic potential and %concentration for
+%  a unipolar Nernst-Planck-Poisson system with volume constraints. The concentrations $c$
+%  stays in the physical limits $0<c<1$ \cite{CCFG2020}.
+%  Right: induced charge electroosmotic flow over a floating electrode induced by a lateral
+%  electric field \cite{FuhrmannEtAlECActa2019}. \label{fig:fv}}
+%\end{figure}
 
 
 \paragraph{Goals of the Project and Methodologies}
 % Please include here:
 % goals
 % methodologies
-Our recent results on modeling multi-material and polycrystalline metal-electrolyte interfaces are confined to the case of thermodynamic equilibrium without charge transfer reactions. This experimentally validated model framework is our starting point for non-equilibrium thermodynamic modeling of electron transfer reactions at multi-material electrodes coupled to charge transport in an electrolyte, taking into account  effects of polycrystalline interface structure, catalyst surface phase transitions, finite ion sizes, solvaticon, concentration dependent susceptibility.
+Our recent results on modeling multi-material and polycrystalline metal-electrolyte interfaces are confined to the case of thermodynamic equilibrium without charge transfer reactions. This experimentally validated model framework is our starting point for non-equilibrium thermodynamic modeling of electron transfer reactions at multi-material electrodes coupled to charge transport in an electrolyte, taking into account  effects of polycrystalline interface structure, catalyst surface phase transitions, finite ion sizes, solvation, concentration dependent susceptibility.
 
-In order to take into account  the heterogeneus structure of the interface, wie aim at a transition from surface patch labeling towards a description of a multi-material electrode in terms of  work function values  and their statistical distribution across the surface, extending  averaging methods as  developed in \cite{JES}  by periodic and statistical homogenization approaches.
+In order to take into account  the heterogeneous structure of the interface, we aim at a transition from surface patch labeling towards a description %of a multi-material electrode in terms of  
+on the basis of work function values of the multi-material electrode. This allows additionally for a statistical distribution across the surface. Further we intend to extend averaging methods as developed in \cite{JES}  by periodic and statistical homogenization approaches.
 %
 These efforts shall result in  rate   equations  for polycrystalline interfaces  and their respective coupling to the bulk processes.
 
 Many eletrocatalysts, in particular platinum free electrocatalysts for water splitting, have semiconductor properties, therefore we intend to extend the electrode models to the case of semiconductor - electrolyte interfaces.
 
-Thermodynamically consistent discretization approaches which allow to preserve qualitative features of the continuous systems of equations  (second law of thermodynamics, mass conservation, positivity of concentrations) will be used to  develop numerical simulaiton models for multi-material electrocatalytic systems.  Preferably, models will be implemented in  Julia.
+Thermodynamically consistent discretization approaches which allow to preserve qualitative features of the continuous systems of equations  (second law of thermodynamics, mass conservation, positivity of concentrations) will be used to  develop numerical simulation models for multi-material electrocatalytic systems.  Preferably, models will be implemented in  Julia.
 
-Model adaptivity strategies shall provide efficient ways to handle the different temporal and spatial scales inherent to the systems to be investigated. In particular they shall be able to decide between spatial resolution of the electrode boundary layers and the lumping of the relevant processes into interface models.
-
+Model adaptivity strategies shall provide efficient ways to handle the different temporal and spatial scales. % \eg double layer resolution vs. electro-neutrality condition. 
+In particular they shall be able to decide between spatial resolution of the electrode boundary layers and the lumping of the relevant processes into interface models.
 
 \paragraph{Main Contributions}
-The envisioned modeling framework will allow to set up analytical and numerical simulation models for multi-material electrocatalytic systems  which in addition include features of electrochemical measurement processes, e.g. voltage cycling for CV or extraction of potential surfaces for STM.
-The simulation  models shall be used to create series of prototypical synthetical measurement data which will be published in order be able to acquaint experimentalists with the modeling and simulation approach developed in the project and to serve as starting points for cooperation projects. Data publication preferably will  use the infrastructure developed in the framework of the NFDI4Cat consortium of the German recommended for funding under the National Research Data Initiative (NDFI) \cite{NFDI4Cat}, provisionally allowing to access measurement data by other groups.
+The envisioned modeling framework will allow to set up analytical and numerical simulation methods for multi-material electrocatalytic systems. The features include electrochemical measurement processes, e.g. voltage cycling for CV or extraction of potential surfaces for STM.
+These simulation tools shall be used to create a series of prototypical synthetical measurement data, which can serve (i) as catalogue for experimentalists to (visually) compare their results to our modeling and simulation approach, (ii) as (labeled)  training sets for machine learning tools,  (iii) as database for parameter estimation. For our data we will use the infrastructure developed in the framework of the NFDI4Cat consortium under the German National Research Data Initiative (NDFI) \cite{NFDI4Cat}, provisionally allowing to access measurement data by other groups.
 
-The project will result in extended bulk-surface models for electrochemical systems which provide an ample field for further investigation in analysis and numerics. 
+Further, the project will result in extended bulk-surface models for electrochemical systems which provide an ample field for further investigation in analysis and numerics. 
 Classical electrode theory based on the Butler-Volmer equation will be generalized.  Upscaling and averaging methods for surface rate equations developed in the project are of potential interest in other applications.
 
 Methodologies for consistent coupling of charge transport processes described by drift-diffusion systems and
 corresponding numerical methods are investigated in several other projects of the application area AA2.
-
 
 \paragraph{Future Research and New Horizons}
 % Please consider the following aspects:
@@ -200,16 +196,16 @@ provides the possibility of experimental comparison with polycrystalline or  mul
 as they occur in electrochemical experimentation and in real world devices.
 
 % - Highlight the long term research or application perspectives which will be opened by your project.
-The ability to model and simulate processes at polycrystalline electrodes, and the communiation pathway with experimentalists openend with the publication of synthetic measurement data will be an excellent foundation
+The ability to model and simulate processes at polycrystalline electrodes, and the communication pathway with experimentalists related to the publication of synthetic measurement data will be an excellent foundation
 for collaborative research projects in the field of electrochemistry based e.g. on grants available through
 the National Hydrogen Initiative.
 
 % - Address potential future research questions / problem complexes which may be approached based on the results upon completion of the project work.
-In the future, it will be possible to apply the metodology to various electrolyte-interface systems
-and to set up inverse problems to interpret results of various measurement methods used to characterize real electrode surfaces. Upon experimental validation, the models can be used to optimze electrocatalytic processes.
+In the future, it will be possible to apply the methodology to various electrolyte-interface systems
+and to set up inverse problems to interpret results of various measurement methods used to characterize real electrode surfaces. Upon experimental validation, the models can be used to optimize electrocatalytic processes.
 The inclusion of semiconducting electrodes will be a starting point to develop models and simulation methods
 for photocatalytic reactions.
-The methdological framework and the resulting models will provide many open questions regarding their
+The methodological framework and the resulting models will provide many open questions regarding their
 mathematical and numerical analysis.
 
 
@@ -242,8 +238,8 @@ Internal cooperation (within MATH+)
 \item AA2: S.Burger: development of outlook on photocatalysis
 \end{itemize}
 
-External scientific cooperation (outside MATH+),
-partially continuing the cooperation of the first phase (?)
+External scientific cooperation (outside MATH+)
+%partially continuing the cooperation of the first phase (?)
 \begin{itemize}
 \item Dr. S. Matera, FU Berlin, UniSysCat
 \item Prof. Dr. P. Strasser TU Berlin
@@ -253,11 +249,11 @@ partially continuing the cooperation of the first phase (?)
 \item Prof. Boris Zaltzman, Ben Gurion University of the Negev
 \end{itemize}
 
-External industrial cooperation (outside MATH+),
-continuing the cooperation of the first phase (?)
-\begin{itemize}
-\item Robert Bosch GmbH, Dr. Ulrich Sauter, Modeling of Electrochemical Components (CR/ARC CE-MEC) 
-\end{itemize}
+External industrial cooperation (outside MATH+): Robert Bosch GmbH, Dr. Ulrich Sauter, Modeling of Electrochemical Components (CR/ARC CE-MEC) 
+%continuing the cooperation of the first phase (?)
+%\begin{itemize}
+%\item Robert Bosch GmbH, Dr. Ulrich Sauter, Modeling of %Electrochemical Components (CR/ARC CE-MEC) 
+%\end{itemize}
 
 \paragraph{Related Projects}
 % Please include your funded projects which are topicwise related to this proposal.
@@ -270,30 +266,33 @@ continuing the cooperation of the first phase (?)
 \item ``Coupled atomistic and nanofluidic simulations for electrocatalysis'' (Joint PhD project with S. Matera
   in the  Berlin International Graduate School for Natural Science and Engineering (BIG-NSE) linked
   to the UniSysCat excellence cluster) focuses on atomistic electrode models
-\item ``Modellbasierte Abschätzung der Lebensdauer von gealterten Li-Batterien für die 2nd-Life Anwendung als stationärer
-  Stromspeicher (MALLi$^2$)'' (BMBF 05M18BCA; PI: M. Landstorfer): General modeling and homogenization of battery cells
-  without phase separation.
+% Das muss meiner Meinung nach nicht unbedingt hier hin ...
+%\item ``Modellbasierte Abschätzung der Lebensdauer von gealterten Li-Batterien für die 2nd-Life Anwendung als stationärer
+%  Stromspeicher (MALLi$^2$)'' (BMBF 05M18BCA; PI: M. Landstorfer): General modeling and homogenization of battery cells
+%  without phase separation.
 \end{itemize}
 
 \paragraph{Further Impact of the Project on MATH$+$}
 % Please discuss different types of impact of your project on
 % MATH+. Sort as follows:
 % - Additional Funding (Further funding of research themes related to this project)
-We see a good perspective for additional funding based on the modeling and simulation approach
-developed in this project.
-
+We see a good perspective for additional projects within the National Hydrogen Initiative. 
+%funding based on the modeling and simulation approach
+%developed in this project.
+%
 % - Research Training (Summer schools, etc.)
-Results and approached from the project will be used in teaching activities.
-
+Methods and results of the project will be used in teaching activities at TU Berlin.
+%
 % - Gender and Diversity (Activities for female students, etc.)
-We will participate education of a diverse group of people in the teaching activities
-
+Further we will participate education of a diverse group of people in the teaching activities
+%
 % - Complementary Skills (Opportunities for project staff to acquire skills complementing existing ones)
-Obtain further skills in numerical methods and their implementation, unique skills in electrochemical
-modeling asked for in  industry
-
+%
+%Obtain further skills in numerical methods and their implementation, unique skills in electrochemical
+Dr. Manuel Landstorfer intends to finish his habilition during the project. %modeling asked for in  industry
+%
 % - Outreach (Plenary lectures, public lectures, etc.)
-We will participate in public outreach activities
+We will participate in public outreach activities within the National Hydrogen Initiative. 
 
 \paragraph{Position(s) of the PI(s)}
 % It is required that the position(s) of all PIs is/are secured for the complete duration of the project applied for. PIs on a fixed-term contract should provide corresponding evidence through a statement by their supervisor (e.g. project proposal XY currently being reviewed/extended by third party funding agency ZZ). 
