@@ -22,7 +22,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PLEASE NOTE THE FOLLOWING LENGTH RESTRICTION:
-% - no more than 4 pages (incl. publications). 
+% - no more than 4 pages (incl. publications).
 % - no more than 8 pages (incl. publications) in the exceptional case that you apply for two positions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,15 +62,15 @@
 \projectTitle{Multi Material Electorcatalysis II}
 %%%%% PIs / Applicants
 % Project _heads_ only!
-% In case a doctoral researcher is to be selected for a position in the project, 
-% applicants must indicate with "*" which PI will act as authorized PhD-supervisor. 
+% In case a doctoral researcher is to be selected for a position in the project,
+% applicants must indicate with "*" which PI will act as authorized PhD-supervisor.
 % Form: initial dot lastname, initial dot lastname
 \projectPIs{J. Fuhrmann, M. Landstorfer}
 
 %%%%% REQUESTED STAFF
 % Please use the following code for the position you request:
-% Category A)	Full positions (100% E13) for 2 years, 
-% Category B)	75% positions (E13) for 3 years (for projects in AAs and EFs only). 
+% Category A)	Full positions (100% E13) for 2 years,
+% Category B)	75% positions (E13) for 3 years (for projects in AAs and EFs only).
 % If you already know whom you intend to hire, please include the name such as "Category A (Dr. Angela Merkel); Start: 1 JAN 2021"
 % In this case, please also include the CV of this person as an additional document in your proposal.
 \projectFundingScheme{Category A (Dr. Rüdiger Müller); Start: 1 JAN 2021}
@@ -78,7 +78,7 @@
 %%%%% SHORT SUMMARY
 % Please add a short summary of your project using a maximum of 100 words or 5 lines!!!
 \projectShortSummary{Complex, multi-material electrocatalysts are crucial for
-  applications relevant for the energy transition. No-equilibrium thermodynamic modeling and numerical simulation
+  applications relevant for the energy transition. Non-equilibrium thermodynamic modeling and numerical simulation
   will help to increase their efficiency  and scalability, extending the
   results of the first project period focused on thermodynamic equilibrium.
   }
@@ -114,15 +114,15 @@ The main driving forces for the development of electrocatalytic technologies are
 reduction by reducing the use of expensive raw materials like Pt and  Pd. E.g. the Berlin based cluster of excellence UniSysCat, searches for substitutions of these expensive materials.
 
 % - Background
-Investigations of electro-catalytic reactions on new materials  
+Investigations of electro-catalytic reactions on new materials
 are carried out by a number of  experimental techniques,  e.g.
-RRDE    (Rotating   Ring    Disc   Electrode),   
-% DEMS   (Differential Electrochemical  Mass  Spectroscopy), 
-CV  (Cyclic  Voltammetry),  
-STM (Scanning Tunneling Microscopy), 
-% EQCM (Electrochemical Quartz Crystal Microbalance), 
+RRDE    (Rotating   Ring    Disc   Electrode),
+% DEMS   (Differential Electrochemical  Mass  Spectroscopy),
+CV  (Cyclic  Voltammetry),
+STM (Scanning Tunneling Microscopy),
+% EQCM (Electrochemical Quartz Crystal Microbalance),
 SEM (Scanning  Electrochemical Microscopy),
-AFM (Atomic Force Microscopy), 
+AFM (Atomic Force Microscopy),
 EIS (Electrochemical Impedance Spectroscopy).
 
 % - State of the art of research in this area
@@ -137,7 +137,7 @@ These approaches assume homogeneous interfaces with no variation in the spatial 
 
 WIAS research group 7 ``Thermodynamic Modeling and Analysis of Phase Transitions'' represented by PI M. Landstorfer is active in the development of mathematical models for electrochemical systems.  A seminal result is a comprehensive electrolyte model which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes. Based on this, thermodynamically consistent boundary conditions for electrochemical reactions at electrode surfaces have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
 
-WIAS research group 3 ``Numerical mathematics and Scientific Computing'' represented by PI J. Fuhrmann contributes to the numerical modeling and simulation of electrochemical systems. This includes  the derivation of a thermodynamically consistent finite volume method \cite{JF2016} for the electrolyte models \cite{DGL2014,VagnerEtAl2019}, implementations in Julia and C++, as well as convergence investigations for  different flux thermodynamically consistent flux expressions \cite{CCFG2020}.   %implementing the model 
+WIAS research group 3 ``Numerical mathematics and Scientific Computing'' represented by PI J. Fuhrmann contributes to the numerical modeling and simulation of electrochemical systems. This includes  the derivation of a thermodynamically consistent finite volume method \cite{JF2016} for the electrolyte models \cite{DGL2014,VagnerEtAl2019}, implementations in Julia and C++, as well as convergence investigations for  different thermodynamically consistent flux expressions \cite{CCFG2020}.   %implementing the model
  %A similar discretization approach is used for the simulation of solid oxide electrolytes \cite{VagnerEtAl2019}. Convergence investigations for different flux thermodynamically consistent flux expressions of finite volume schemes for unipolar drift-diffusion models have been performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow \cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
 %The Julia language allows to utilize forward mode automatic differentiation to significantly reduce the implementation effort for strongly nonlinear problems reducing to reduce code complexity compared to C++ and to allow for easy distribution of the code based on a modern package management system.  The computational results in \cite{CCFG2020,VagnerEtAl2019} have been obtained by the new Julia package for finite volume methods \cite{VoronoiFVM} developed by the PI.
 
@@ -175,23 +175,23 @@ Recently published work \cite{JES}, supported by MATH+ within the project MultEC
 % methodologies
 Our recent results on modeling multi-material metal-electrolyte interfaces are confined to the case of thermodynamic equilibrium without charge transfer reactions. This experimentally validated model framework is our starting point for non-equilibrium thermodynamic modeling of electron transfer reactions at multi-material electrodes coupled to charge transport, taking into account polycrystalline interface structure, catalyst surface phase transitions, finite ion sizes, solvation, concentration dependent susceptibility.
 
-In order to take into account  the heterogeneous structure of the interface, we aim at a transition from surface patch labeling towards a description %of a multi-material electrode in terms of  
+In order to take into account  the heterogeneous structure of the interface, we aim at a transition from surface patch labeling towards a description %of a multi-material electrode in terms of
 on the basis of work function values of the multi-material electrode. This allows additionally for a statistical distribution across the surface. Further we intend to extend averaging methods as developed in \cite{JES}  by periodic and statistical homogenization approaches.
 %
 These efforts shall result in  rate   equations  for polycrystalline interfaces  and their respective coupling to the bulk processes.
 
-Many eletrocatalysts, in particular platinum free electrocatalysts for water splitting, have semiconductor properties, therefore we intend to extend the electrode models to the case of semiconductor - electrolyte interfaces.
+Many eletrocatalysts, in particular platinum free electrocatalysts for water splitting, have semiconductor properties, therefore we intend to extend the electrode models to the case of semiconductor-electrolyte interfaces.
 
 Thermodynamically consistent discretization approaches which allow to preserve qualitative features of the continuous systems of equations  (second law of thermodynamics, mass conservation, positivity of concentrations) will be used to  develop numerical simulation models for multi-material electrocatalytic systems.  Preferably, models will be implemented in  Julia.
 
-Model adaptivity strategies shall provide efficient ways to handle the different temporal and spatial scales. % \eg double layer resolution vs. electro-neutrality condition. 
+Model adaptivity strategies shall provide efficient ways to handle the different temporal and spatial scales. % \eg double layer resolution vs. electro-neutrality condition.
 In particular they shall be able to decide between spatial resolution of the electrode boundary layers and the lumping of the relevant processes into interface models.
 
 \paragraph{Main Contributions}
 The envisioned modeling framework will allow to set up analytical and numerical simulation models for multi-material electrocatalytic systems including  features of  electrochemical measurement processes, e.g. voltage cycling for CV or extraction of potential surfaces for STM.
 These simulation tools shall be used to create a series of prototypical synthetical measurement data, which can serve (i) as catalogue for experimentalists to (visually) compare their results to our modeling and simulation approach, (ii) as (labeled)  training sets for machine learning tools,  (iii) as database for parameter estimation. Data will be published using infrastructure developed by the NFDI4Cat consortium under the German National Research Data Initiative (NDFI) \cite{NFDI4Cat}, provisionally allowing to access measurement data by other groups.
 
-The project will result in extended bulk-surface models for electrochemical systems which provide an ample field for further investigation in analysis and numerics. 
+The project will result in extended bulk-surface models for electrochemical systems which provide an ample field for further investigation in analysis and numerics.
 Classical electrode theory based on the Butler-Volmer equation will be generalized.  Upscaling and averaging methods for surface rate equations developed in the project are of potential interest in other applications.
 
 Consistent coupling of charge transport to other physical processes and
@@ -358,7 +358,7 @@ The project  ``Coupled atomistic and nanofluidic simulations for electrocatalysi
 % Please discuss different types of impact of your project on
 % MATH+. Sort as follows:
 % - Additional Funding (Further funding of research themes related to this project)
-We see a good perspective for additional projects within the National Hydrogen Initiative. 
+We see a good perspective for additional projects within the National Hydrogen Initiative.
 %funding based on the modeling and simulation approach
 %developed in this project.
 %
@@ -377,8 +377,8 @@ Dr. Manuel Landstorfer intends to finish his habilition during the project. %mod
 We will participate in public outreach activities (e.g. Lange Nacht der Wissenschaften).
 
 \paragraph{Position(s) of the PI(s)}
-% It is required that the position(s) of all PIs is/are secured for the complete duration of the project applied for. PIs on a fixed-term contract should provide corresponding evidence through a statement by their supervisor (e.g. project proposal XY currently being reviewed/extended by third party funding agency ZZ). 
-% Junior-Profs and Junior Research Group Leaders should refer to the envisioned date of their interim evaluation. 
+% It is required that the position(s) of all PIs is/are secured for the complete duration of the project applied for. PIs on a fixed-term contract should provide corresponding evidence through a statement by their supervisor (e.g. project proposal XY currently being reviewed/extended by third party funding agency ZZ).
+% Junior-Profs and Junior Research Group Leaders should refer to the envisioned date of their interim evaluation.
 Both PIs have full permanent positions at Weierstrass Institute, J. Fuhrmann is deputy head of WIAS Research group 3.
 
 \end{document}
