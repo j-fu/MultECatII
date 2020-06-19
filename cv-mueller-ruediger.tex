@@ -1,0 +1,132 @@
+% $Id: cv-lastname-firstname.tex,v 1.3 2005/02/01 19:11:05 eyrich Exp $
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CV TEMPLATE
+%
+%
+% this file is to be named as follows:
+%      cv-<lastname-firstname>.tex
+%      e.g., cv-mehrmann-volker.tex
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[8pt,a5paper]{extbook}
+\usepackage[ngerman,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cv-makros}
+\begin{document}
+
+% NAME         first name last name, title
+%              e.g., Peter X. Mustermann, Prof. Dr.
+\name{R\"udiger M\"uller, Dr.}
+
+% DATE/PLACE OF BIRTH   month dd, yyyy -- city, country
+%              e.g.: February 27, 1950 -- Wien, Austria
+\birth{July 25, 1971 -- Neuss, Germany}
+
+% AFFILIATION  department, institution\\
+%              street no.\\
+%              plz Berlin
+%              e.g.,   Institut f\"ur Mathematik, MA 6-1, TU Berlin\\
+%                      Stra\ss e des 17. Juni 136\\
+%                      10623 Berlin}
+\affiliation{Weierstrass  Institute\\
+  Mohrenstra{\ss}e 39\\
+  10117 Berlin}
+
+%--------------------------------------------------------------------------------
+% TELEPHON / FAX
+\tel{(030) 20372-502}
+
+\fax{(030) 20372-303}
+
+% EMAIL / HOMEPAGE
+\email{mueller@wias-berlin.de}
+
+\www{http://wias-berlin.de/contact/staff/index.jsp?lang=1\&uname=mueller}
+
+% CURRENT POSITION      e.g., Full professor (C4)
+\position{Postdoctoral researcher}
+
+% SCIENTIFIC VITA       e.g.,
+%                       1980 Diploma\\
+%                       1981 Teaching assistant, TU Berlin\\
+%                       1981--1982 DAAD Fellow, U Regensburg\\
+%                       1984 PhD, U Regensburg (with K. Meyer)\\
+%                       ...
+\vita{1997 Diploma, U Paderborn\\
+  1997--03 Research assistant, U Magdeburg\\
+  1998--05 PhD student, U Magdeburg\\
+  2005 PhD, U Magdeburg (with G.\ Warnecke)\\
+  2005--09 Research assistant, HU Berlin\\
+  2009--   Researcher, Weierstrass Institute\\
+  2010--11 Visiting full professor (W2), U Bonn\\
+  2013     Visiting professor, U Urgensh, Uzbekistan
+      }
+
+% FIELDS OF INTEREST    keywords, e.g., Interacting particle systems, random media
+\interest{numerical analysis, electrochemistry modeling, non-equilibrium thermodynamics,
+		free- and moving boundary problems, phase field equations}
+
+% AWARDS/OFFERS         e.g., 1988 Heisenberg fellowship\\
+%                             1992 Professor U Nancy
+% \awards{}
+
+% EDITORSHIP            journals, book series
+%                       e.g., 1998-- Associate editor of \emph{Archiv der Mathematik}\\
+%                             2001-- Associate editor of \emph{...}
+% \editorship{}
+
+% MEMBERSHIP            scientific societies
+%                       e.g., DMV, EMS, SNF
+\membership{DMV, GAMM}
+
+% INVITED LECTURES
+\lectures{Invited lectures during last 5 years at
+			WPI Wien, % Wolfgang Pauli Institute, Wien,
+			LJLL (U Paris), % Laboratoire Jacques-Louis Lions,
+			U Stuttgart, RWTH Aachen, TU Berlin%
+}
+
+% RECENT RELATED RESEARCH ACTIVITIES  grants, research groups, sfb, etc.
+%                        e.g.,
+%                        More than 10 grants in the last ten years,
+%                        e.g., in DFG-SPP ``Online-Optimierung gro\ss er Systeme'';
+%                        DFG research group ``Algorithmen, Struktur, Zufall''; in BMBF programs
+%                        supporting cooperation between mathematics and industry; within
+%                        three DFG GKs
+% \ractivities{}
+
+% INDUSTRY COOPERATION   list of companies
+% \cooperation {}
+
+% ORGANIZATIONAL ACTIVITIES
+%                        e.g.,
+%                        Dean of a faculty; Member of a faculty
+%                        council and an academic senate; coordinator
+%                        of a DFG priority program; president of the
+%                        ICM'98 org. commit.; president of DMV
+%                        (1993--94); member of the exec. commit. of
+%                        the Int. Math. Union (IMU)
+% \oactivities{}
+
+% SELECTED PUBLICATIONS   uncomment and complete the following line
+\nocite{
+FLM20,
+FGLMM19,
+DGM18,
+EigelMueller2018,
+DGLM2018,
+DreyerGuhlkeMueller2016,
+DreyerGuhlkeMueller2013,
+BartelsMueller2011b,
+BartelsMuellerOrtner:2011,
+BartelsJensenMueller:2009}
+\bibliography{mrabbrev,cv-mueller-ruediger}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
