@@ -59,7 +59,7 @@
 
 %%%%% PROJECT TITLE
 % e.g., Deep learning in Berlin administrations
-\projectTitle{Multi Material Electorcatalysis II}
+\projectTitle{Multi Material Electorcatalysis (MultECat II)}
 %%%%% PIs / Applicants
 % Project _heads_ only!
 % In case a doctoral researcher is to be selected for a position in the project, 
@@ -77,11 +77,17 @@
 
 %%%%% SHORT SUMMARY
 % Please add a short summary of your project using a maximum of 100 words or 5 lines!!!
-\projectShortSummary{Complex, multi-material electrocatalysts are crucial for
-  applications relevant for the energy transition. No-equilibrium thermodynamic modeling and numerical simulation
-  will help to increase their efficiency  and scalability, extending the
-  results of the first project period focused on thermodynamic equilibrium.
-  }
+%\projectShortSummary{Modern multi-material electrocatalysis is crucial for
+%  applications relevant for the energy transition. Thermodynamic modeling and numerical simulation
+%  will help to increase their efficiency, scalability and reduce cost. We intend to extending the
+%  results of the first project period towards non-equilibrium  thermodynamics.
+%  }
+  
+ \projectShortSummary{Electrocatalysis is crucial for our future society and  sustainable economy. 
+%applications relevant for the energy transition.
+Thermodynamic modeling and numerical simulation
+will help to increase their efficiency, scalability and reduce cost.
+Results of MultECat will be extended to non-equilibrium, a large set of samples calculated, and data provided within the NFDI.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAIN CONTENT
@@ -104,18 +110,18 @@
 
 % - Account of the problem
 
-The strategic importance of technologies based on electrocatalytic reactions is underlined in the recently approved National Hydrogen Strategy of the German Federal Government.  It grants hydrogen, and in particular ``green hydrogen'' created with renewable energy a strategic role in the decarbonization of the economy as an energy carrier, an energy storage option, a sector coupling technology, a precursor for the chemical industry and a means for CO2 emission reduction in various industrial processes.
+The strategic importance of technologies based on electrocatalytic reactions is underlined in the recently approved National Hydrogen Strategy of the German Federal Government.  It grants hydrogen, and in particular ``green hydrogen'' created with renewable energies, a strategic role in the decarbonization of the economy. Hydrogen serves as energy carrier, energy storage option, sector coupling technology, precursor for the chemical industry and can reduce CO2 in various industrial processes.
 The creation of hydrogen from electrical energy in electrolyzers and the reverse process -- the recovery of electrical energy from hydrogen in fuel cells -- are seen as indispensable technologies whose development shall be supported by R\&D investments and market incentives.
 %
 Both technologies rely on electro-catalytic reactions. Production and utilization of hydrogen are just examples for this class of reactions, other electro-catalytic reactions occur in post lithium batteries, material synthesis and other fields.
 
 % - Motivation
 The main driving forces for the development of electrocatalytic technologies are (i) the synthetization of new electrode and electrolyte materials (e.g. ionic liquids and perovskites) (ii) the fabrication of nano-structured and composite electro-catalytic surfaces (multi-material catalysts) and (iii) material and operational optimization. Central goal for large scale electro-catalysis is cost
-reduction by reducing the use of expensive raw materials like Pt and  Pd. E.g. the Berlin based cluster of excellence UniSysCat, searches for substitutions of these expensive materials.
+reduction by reducing the use of expensive raw materials like Pt and  Pd. For instance, the Berlin based cluster of excellence UniSysCat searches for substitutions of these materials.
 
 % - Background
 Investigations of electro-catalytic reactions on new materials  
-are carried out by a number of  experimental techniques,  e.g.
+are carried out by a number of  experimental techniques,  especially
 RRDE    (Rotating   Ring    Disc   Electrode),   
 % DEMS   (Differential Electrochemical  Mass  Spectroscopy), 
 CV  (Cyclic  Voltammetry),  
@@ -126,21 +132,18 @@ AFM (Atomic Force Microscopy),
 EIS (Electrochemical Impedance Spectroscopy).
 
 % - State of the art of research in this area
-
 In order to interpret experimental results, and to understand, predict and optimize electrocatalytic systems, mathematical models have to be used.
 Modeling results can be expressed as analytic expressions or need to be obtained via numerical simulation.
-Research more and more focuses on the interplay between mass transport, reactions and  electric field on the nanoscale, resolving double layer effects \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}.
-%
-These approaches assume homogeneous interfaces with no variation in the spatial structure. They do not take into surface inhomogenities, which would lead to variations of the electrochemical activity.
+Research more and more focuses on the interplay between mass transport, reactions and  electric field on the nanoscale, resolving double layer effects \cite{lin2019understanding,tan2018double,eden2019modeling,bohra2019modeling}. Most approaches, however, assume homogeneous interfaces  and do not take into account variations in the surface spatial structure, although it  
+%They do not take into surface inhomogenities, which would
+leads to variations in electrochemical activity.
 
 % - Preliminary work by the PIs
 
-WIAS research group 7 ``Thermodynamic Modeling and Analysis of Phase Transitions'' represented by PI M. Landstorfer is active in the development of mathematical models for electrochemical systems.  A seminal result is a comprehensive electrolyte model which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes. Based on this, thermodynamically consistent boundary conditions for electrochemical reactions at electrode surfaces have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
-
-WIAS research group 3 ``Numerical mathematics and Scientific Computing'' represented by PI J. Fuhrmann contributes to the numerical modeling and simulation of electrochemical systems. This includes  the derivation of a thermodynamically consistent finite volume method \cite{JF2016} for the electrolyte models \cite{DGL2014,VagnerEtAl2019}, implementations in Julia and C++, as well as convergence investigations for  different flux thermodynamically consistent flux expressions \cite{CCFG2020}.   %implementing the model 
+WIAS research group 3 ``Numerical mathematics and Scientific Computing'' represented by PI J. Fuhrmann contributes to the numerical modeling and simulation of electrochemical systems. This includes  the derivation of a thermodynamically consistent finite volume method \cite{JF2016} for the electrolyte models \cite{DGL2014,VagnerEtAl2019}, implementations in Julia and C++, as well as convergence investigations for  different thermodynamically consistent flux expressions \cite{CCFG2020}.   %implementing the model 
  %A similar discretization approach is used for the simulation of solid oxide electrolytes \cite{VagnerEtAl2019}. Convergence investigations for different flux thermodynamically consistent flux expressions of finite volume schemes for unipolar drift-diffusion models have been performed in \cite{CCFG2020}, see also Fig. \ref{fig:fv}, left. The finite volume method for ion transport has been coupled to a pressure robust Navier-Stokes solver for electrolyte flow \cite{FGLMMSpringer2019,FuhrmannEtAlECActa2019}, see also Fig. \ref{fig:fv}, right.
 %The Julia language allows to utilize forward mode automatic differentiation to significantly reduce the implementation effort for strongly nonlinear problems reducing to reduce code complexity compared to C++ and to allow for easy distribution of the code based on a modern package management system.  The computational results in \cite{CCFG2020,VagnerEtAl2019} have been obtained by the new Julia package for finite volume methods \cite{VoronoiFVM} developed by the PI.
-
+WIAS research group 7 ``Thermodynamic Modeling and Analysis of Phase Transitions'' represented by PI M. Landstorfer is active in the development of mathematical models for electrochemical systems.  A seminal result is a comprehensive electrolyte model which provides an accurate description of the electrochemical double layer and yields broad accordance to experimental data of single crystal electrodes. Based on this, thermodynamically consistent boundary conditions for electrochemical reactions at electrode surfaces have been developed \cite{DGM2013,DGL2014,Landstorfer2016187,landstorfer2017boundary}.
 
 Recently published work \cite{JES}, supported by MATH+ within the project MultECat, provides first results on modeling, simulation and validation of electrochemical interfaces on polycrystalline materials (see Fig. \ref{fig:JES}). A methodology to handle realistic multi-material surfaces was developed, allowing for a their stochastic description. Results on Debye--Hückel theory, concentration dependent susceptibilities, and electrolyte transport are in the final stage of publication. % HIER DIE ARBEITEN IN PREP HIn
 
@@ -173,14 +176,14 @@ Recently published work \cite{JES}, supported by MATH+ within the project MultEC
 % Please include here:
 % goals
 % methodologies
-Our recent results on modeling multi-material metal-electrolyte interfaces are confined to the case of thermodynamic equilibrium without charge transfer reactions. This experimentally validated model framework is our starting point for non-equilibrium thermodynamic modeling of electron transfer reactions at multi-material electrodes coupled to charge transport, taking into account polycrystalline interface structure, catalyst surface phase transitions, finite ion sizes, solvation, concentration dependent susceptibility.
+Our recent results on modeling multi-material metal-electrolyte interfaces are confined to the case of thermodynamic equilibrium without charge transfer reactions. This experimentally validated model framework is our starting point for non-equilibrium thermodynamic modeling of electron transfer reactions at multi-material electrodes coupled to charge transport. It accounts for the polycrystalline interface structure, catalyst surface phase transitions, finite ion sizes, solvation, concentration dependent susceptibility.
 
-In order to take into account  the heterogeneous structure of the interface, we aim at a transition from surface patch labeling towards a description %of a multi-material electrode in terms of  
-on the basis of work function values of the multi-material electrode. This allows additionally for a statistical distribution across the surface. Further we intend to extend averaging methods as developed in \cite{JES}  by periodic and statistical homogenization approaches.
+A pioneering aspect for heterogeneous interfaces is the transition from surface patch labeling towards a description %of a multi-material electrode in terms of  
+on the basis of work function values of multi-material electrodes. This allows additionally for a statistical distribution across the surface. Further we intend to extend averaging methods as developed in \cite{JES}  by periodic and statistical homogenization approaches.
 %
 These efforts shall result in  rate   equations  for polycrystalline interfaces  and their respective coupling to the bulk processes.
 
-Many eletrocatalysts, in particular platinum free electrocatalysts for water splitting, have semiconductor properties, therefore we intend to extend the electrode models to the case of semiconductor - electrolyte interfaces.
+Many electrocatalysts, in particular platinum free electrocatalysts for water splitting, have semiconductor properties, therefore we intend to extend the electrode models to the case of semiconductor-electrolyte interfaces.
 
 Thermodynamically consistent discretization approaches which allow to preserve qualitative features of the continuous systems of equations  (second law of thermodynamics, mass conservation, positivity of concentrations) will be used to  develop numerical simulation models for multi-material electrocatalytic systems.  Preferably, models will be implemented in  Julia.
 
@@ -366,7 +369,7 @@ We see a good perspective for additional projects within the National Hydrogen I
 Methods and results of the project will be used in teaching activities at TU Berlin,
 %
 % - Gender and Diversity (Activities for female students, etc.)
-which will provided to a diverse group of students.
+which will be provided to a diverse group of students.
 %
 % - Complementary Skills (Opportunities for project staff to acquire skills complementing existing ones)
 %
